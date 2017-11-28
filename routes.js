@@ -5,4 +5,19 @@ module.exports = function(app, io){
 	app.get('/', function(req, res){
 		res.render('home');
 	});
+
+	// On '/create', render user create view
+	app.get('/create', function(req, res){
+		res.render('create');
+	});
+
+	// On '/new', create new room
+	app.get('/new', function(req, res){
+		
+	});
+
+
+
+
+
 }
