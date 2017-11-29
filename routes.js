@@ -1,6 +1,7 @@
 // Export function and pass app and io instances from app.js
 
 module.exports = function(app, io){
+	
 	// On '/', render home view
 	app.get('/', function(req, res){
 		res.render('home');
@@ -13,11 +14,13 @@ module.exports = function(app, io){
 
 	// On '/new', create new room
 	app.get('/new', function(req, res){
-		
+		res.render('new');
 	});
 
+	// Initialize new socket.io
+	 var room = io.on('connection', function(socket){
 
-
+	});
 
 
 }
